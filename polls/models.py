@@ -32,4 +32,4 @@ class Choice(models.Model):
 
 class PLInput(models.Model):
     week_ending = models.DateTimeField('week ending')
-    sales = models.DecimalField()
+    sales = models.DecimalField(decimal_places=2, max_digits=12)
