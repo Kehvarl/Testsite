@@ -1,4 +1,5 @@
 venv/
 manage.py
 *.pyc
-sqlite.db*
+db.sqlite3
+*__pycache__/
