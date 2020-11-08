@@ -2,7 +2,7 @@
 <h1>Message Board Homepage</h1>
 
 <ul>
-  {% for post in object_list %}
+  {% for post in all_posts_list %}
     <li>{{ post.text }}</li>
   {% endfor %}
 </ul>
