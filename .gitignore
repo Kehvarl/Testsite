@@ -5,3 +5,5 @@ db.sqlite3
 *__pycache__/
 *.sqlite3
 mysite/posts/migrations/
+mysite/blog/migrations/
+mysite/polls/migrations/
