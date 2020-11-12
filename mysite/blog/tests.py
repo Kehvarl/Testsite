@@ -28,6 +28,12 @@ class BlogTests(TestCase):
         self.assertEqual(f'{self.post.author}', 'testuser')
         self.assertEqual(f'{self.post.body}', 'Nice body content.')
 
+    def test_post_list_view(self):
+        response = self.client.get(reverse('blog:home'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Nice body content.')
+        self.assertTemplateUsed(response, 'blog/home.html')
+
     def test_post_detail(self):
         response = self.client.get('/blog/post/1/')
         no_response = self.client.get('/blog/post/1000000/')
