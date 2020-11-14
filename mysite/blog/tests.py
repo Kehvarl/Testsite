@@ -55,13 +55,13 @@ class BlogTests(TestCase):
         self.assertEqual(Post.objects.last().title, 'New title')
         self.assertEqual(Post.objects.last().body, 'New text')
 
-    def text_post_update_view(self):
+    def test_post_update_view(self):
         response = self.client.post(reverse('blog:post_edit', args='1'), {
             'title': 'Updated title',
             'body': 'Updated text',
         })
         self.assertEqual(response.status_code, 302)
 
-    def text_post_delete_view(self):
+    def test_post_delete_view(self):
         response = self.client.post(reverse('blog:post_delete', args='1'))
         self.assertEqual(response.status_code, 302)
