@@ -4,6 +4,8 @@ manage.py
 db.sqlite3
 *__pycache__/
 *.sqlite3
+mysite/staticfiles/
+mysite/accounts/migrations/
 mysite/posts/migrations/
 mysite/blog/migrations/
 mysite/polls/migrations/
