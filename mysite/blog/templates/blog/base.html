@@ -20,7 +20,7 @@
       <p>Hi {{ user.username }}</p>
       <a href="{% url 'logout' %}">Log Out</a>
     {% else %}
-      <a href="{% url 'login' %}">Log In</a>
+      <a href="{% url 'login' %}">Log In</a> or <a href="{% url 'accounts:signup' %}">Sign Up</a>
     {% endif %}
     <div>
       {% block content %}
